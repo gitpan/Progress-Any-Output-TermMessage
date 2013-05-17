@@ -1,0 +1,38 @@
+NAME
+    Progress::Any::Output::TermMessage - Output progress to terminal as
+    simple message
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Progress::Any::Output;
+     Progress::Any::Output->set('TermMessage', template=>"[%t] (%c/%C) %m");
+
+DESCRIPTION
+    This output displays progress indicators as messages on terminal.
+
+METHODS
+  new(%args) => OBJ
+    Instantiate. Usually called through
+    "Progress::Any::Output->set("TermMessage", %args)".
+
+    Known arguments:
+
+    *   template => STR (default: '(%c/%C) %m')
+
+        Will be used to do "$progress->fill_template()". See Progress::Any
+        for supported template strings.
+
+SEE ALSO
+    Progress::Any
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
